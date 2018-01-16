@@ -1,12 +1,11 @@
-# Go Make Things [![Build Status](https://travis-ci.org/cferdinandi/gomakethings.svg)](https://travis-ci.org/cferdinandi/gomakethings)
-The personal website of Chris Ferdinandi. [http://gomakethings.com](http://gomakethings.com)
+# GMT Checkout
+WordPress theme for the GMT checkout/shopping cart.
 
 
 ## Dependencies
 Make sure these are installed first.
 
 * [Node.js](http://nodejs.org)
-* [Ruby Sass](http://sass-lang.com/install)
 * [Gulp](http://gulpjs.com) `sudo npm install -g gulp`
 
 
