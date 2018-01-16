@@ -1,0 +1,17 @@
+/**
+ * @section WordPress Forms
+ * WordPress-specific form style overrides.
+ */
+
+
+// Hack for WP form buttons
+input[type="submit"] {
+	@extend .btn;
+	@extend .input-inline;
+}
+
+
+// Spam blocker
+.tarpit {
+	@extend [hidden];
+}

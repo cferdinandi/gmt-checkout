@@ -1,0 +1,232 @@
+/**
+ * @section Easy Digital Downloads
+ * Custom overrides for Easy Digital Downloads
+ */
+
+/**
+ * Checkout table
+ */
+
+tfoot th {
+	border-bottom: none;
+	border-top: calc-em(2px) solid $color-gray-light;
+	font-weight: bold;
+}
+
+// Remove spacing from fieldsets
+#edd_checkout_wrap fieldset {
+	@extend .no-margin-bottom;
+}
+
+
+/**
+ * Discount code link
+ */
+#edd-discount-code-wrap .edd-description {
+	font-weight: bold;
+}
+
+#edd_show_discount {
+	font-weight: bold;
+}
+
+.edd_discount_link {
+	font-weight: normal;
+}
+
+label[for="edd-discount"] {
+	@extend [hidden];
+}
+
+
+/**
+ * Select payment type
+ */
+.edd-payment-mode-label {
+	font-weight: bold;
+}
+
+#edd-payment-mode-wrap input[type="radio"] {
+	@extend .margin-bottom-small;
+}
+
+// #edd_payment_mode_submit,
+// #edd_checkout_user_info {
+// 	@extend .padding-top;
+
+// 	.edd-stripe-checkout & {
+// 		padding-top: 0;
+// 	}
+// }
+
+
+
+/**
+ * Payment icons
+ */
+.edd-payment-icons {
+	.icon {
+		fill: $color-gray-dark;
+
+		&.active {
+			fill: $color-primary;
+		}
+	}
+
+	.icon {
+		height: 1.75em;
+	}
+}
+
+
+/**
+ * "Complete Purchase" button
+ */
+#edd-purchase-button {
+	@extend .btn-large;
+	display: none;
+	visibility: hidden;
+
+	.js-edd & {
+		display: inline-block;
+		visibility: visible;
+	}
+}
+
+// Message above disabled "Complete Purchase" button when JS isn't enabled
+.js-edd #keel-edd-no-js-purchase-message {
+	@extend [hidden];
+}
+
+
+/**
+ * Cancel button
+ */
+.edd-cancel {
+	@extend .padding-top-small;
+	display: none;
+	visibility: hidden;
+
+	.js-edd-cancel & {
+		display: block;
+		visibility: visible;
+	}
+}
+
+
+/**
+ * SSL message on credit card/Stripe checkout
+ */
+#edd_secure_site_wrapper {
+	@extend [hidden];
+	// @extend .margin-bottom;
+	// font-style: italic;
+
+	// .padlock:before {
+	// 	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#272727" d="M13 7h-1V4a4 4 0 0 0-8 0v3H3c-.55 0-1 .45-1 1v7c0 .55.45 1 1 1h10c.55 0 1-.45 1-1V8c0-.55-.45-1-1-1zm-5 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm2-6H6V4c0-1.103.897-2 2-2s2 .897 2 2v3z"/></svg>');
+	// 	margin-right: calc-em(5px);
+	// }
+}
+
+
+/**
+ * Credit Card Fields
+ */
+
+// Add grid structure
+#edd_cc_fields,
+#edd_cc_address {
+	@extend .row;
+}
+
+#edd-card-number-wrap,
+#edd-card-name-wrap,
+#edd-card-country-wrap {
+	@extend .grid-two-thirds;
+}
+
+#edd-card-cvc-wrap,
+.card-expiration,
+#edd-card-zip-wrap {
+	@extend .grid-third;
+}
+
+
+// Hide all the extraneous stuff
+#edd_checkout_user_info,
+#edd_cc_fields,
+#edd_cc_address,
+#edd-support-wrap {
+
+	legend {
+		@extend [hidden];
+	}
+
+	.edd-label {
+		font-weight: bold;
+		margin-bottom: calc-em(4px);
+	}
+
+	.edd-required-indicator {
+		@extend [hidden];
+	}
+
+	.edd-description {
+		@extend [hidden];
+	}
+
+	p {
+		@extend .no-margin-bottom;
+	}
+
+}
+
+
+// Adjust the expiration fields
+#card_exp_month,
+#card_exp_year {
+	@extend .input-inline;
+}
+
+
+// Stripe "no token" error
+#edd_error_no_token {
+	@extend [hidden];
+}
+
+
+// Link to product description page
+.gmt-edd-link-to-product-in-cart {
+	@extend .text-small;
+	@extend .text-muted;
+}
+
+
+// Hide form label
+.edd-self-service-label {
+	@extend .screen-reader;
+}
+
+// Grid layout
+.edd-self-service-row {
+	@extend .row;
+}
+
+.edd-self-service-grid-input {
+	@extend .grid-two-thirds;
+}
+
+.edd-self-service-grid-button {
+	@extend .grid-third;
+}
+
+// Button styles
+.edd-self-service-button {
+	@extend .btn;
+	@extend .btn-block;
+}
+
+// Hide cart image
+.edd_cart_item_image {
+	@extend [hidden];
+}
