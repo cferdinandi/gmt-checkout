@@ -1063,8 +1063,8 @@ document.documentElement.className += ' js-edd';
 		// Make sure we have data to render
 		if (!data) return;
 
-		// Only render on sales pages
-		if (!/\/guides\//.test(window.location.pathname) && !/\/checkout\//.test(window.location.pathname)) return;
+		// Only render on checkout
+		if (!document.body.classList.contains('edd-checkout')) return;
 
 		// Get the nav
 		var nav = document.querySelector('header');
@@ -1108,7 +1108,7 @@ document.documentElement.className += ' js-edd';
 		};
 
 		// Create and send a GET request
-		xhr.open('GET', '/pricing-parity');
+		xhr.open('GET', 'http://localhost:8888/go-make-things-checkout//pricing-parity');
 		xhr.responseType = 'document';
 		xhr.send();
 

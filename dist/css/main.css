@@ -706,7 +706,7 @@ q:after {
  * Styling for CSS buttons.
  */
 /* line 6, src/sass/components/_buttons.scss */
-.btn, input[type="submit"], .edd-self-service-button {
+.btn, input[type="submit"], .edd-self-service-button, .gmt-edd-slack-form-button {
   background-color: #f7272f;
   border: 0.125em solid #f7272f;
   border-radius: 0.0725em;
@@ -720,26 +720,29 @@ q:after {
 }
 
 /* line 18, src/sass/components/_buttons.scss */
-.btn, input[type="submit"], .edd-self-service-button, .btn:visited, input[type="submit"]:visited, .edd-self-service-button:visited {
+.btn, input[type="submit"], .edd-self-service-button, .gmt-edd-slack-form-button, .btn:visited, input[type="submit"]:visited, .edd-self-service-button:visited, .gmt-edd-slack-form-button:visited {
   color: #ffffff;
 }
 
 /* line 24, src/sass/components/_buttons.scss */
-a.btn, .btn.link-block-styled, input.link-block-styled[type="submit"], .link-block-styled.edd-self-service-button, a.edd-self-service-button {
+a.btn, .btn.link-block-styled, input.link-block-styled[type="submit"], .link-block-styled.edd-self-service-button, .link-block-styled.gmt-edd-slack-form-button, a.edd-self-service-button, a.gmt-edd-slack-form-button {
   text-decoration: none;
 }
 
 /* line 28, src/sass/components/_buttons.scss */
-.btn:hover, input[type="submit"]:hover, .edd-self-service-button:hover,
+.btn:hover, input[type="submit"]:hover, .edd-self-service-button:hover, .gmt-edd-slack-form-button:hover,
 .btn:focus,
 input[type="submit"]:focus,
 .edd-self-service-button:focus,
+.gmt-edd-slack-form-button:focus,
 .btn:active,
 input[type="submit"]:active,
 .edd-self-service-button:active,
+.gmt-edd-slack-form-button:active,
 .btn.active,
 input.active[type="submit"],
-.active.edd-self-service-button {
+.active.edd-self-service-button,
+.active.gmt-edd-slack-form-button {
   background-color: #cb070e;
   border-color: #cb070e;
   color: #ffffff;
@@ -764,19 +767,21 @@ a .btn-secondary:active, .link-block-styled .btn-secondary:active,
 }
 
 /* line 59, src/sass/components/_buttons.scss */
-.btn:active, input[type="submit"]:active, .edd-self-service-button:active,
+.btn:active, input[type="submit"]:active, .edd-self-service-button:active, .gmt-edd-slack-form-button:active,
 .btn.active,
 input.active[type="submit"],
-.active.edd-self-service-button {
+.active.edd-self-service-button,
+.active.gmt-edd-slack-form-button {
   box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
   outline: 0;
 }
 
 /* line 65, src/sass/components/_buttons.scss */
-.btn.disabled, input.disabled[type="submit"], .disabled.edd-self-service-button,
+.btn.disabled, input.disabled[type="submit"], .disabled.edd-self-service-button, .disabled.gmt-edd-slack-form-button,
 .btn[disabled],
 input[disabled][type="submit"],
-[disabled].edd-self-service-button {
+[disabled].edd-self-service-button,
+[disabled].gmt-edd-slack-form-button {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0.5;
@@ -807,7 +812,7 @@ input[type="button"].edd-self-service-button {
 }
 
 /* line 91, src/sass/components/_buttons.scss */
-.btn, input[type="submit"], .edd-self-service-button,
+.btn, input[type="submit"], .edd-self-service-button, .gmt-edd-slack-form-button,
 button,
 html input[type="button"],
 input[type="reset"],
@@ -824,10 +829,11 @@ input[type="submit"] {
 }
 
 /* line 108, src/sass/components/_buttons.scss */
-.btn:last-child, input[type="submit"]:last-child, .edd-self-service-button:last-child,
+.btn:last-child, input[type="submit"]:last-child, .edd-self-service-button:last-child, .gmt-edd-slack-form-button:last-child,
 input.btn,
 input[type="submit"],
-input.edd-self-service-button {
+input.edd-self-service-button,
+input.gmt-edd-slack-form-button {
   margin-right: 0;
 }
 
@@ -1365,25 +1371,47 @@ tfoot th {
 }
 
 /**
+ * @section Slack
+ * Custom overrides for Slack Invites
+ */
+/* line 7, src/sass/components/_slack.scss */
+.gmt-edd-slack-form-label {
+  font-weight: bold;
+}
+
+/* line 16, src/sass/components/_slack.scss */
+.gmt-edd-slack-alert {
+  font-style: italic;
+}
+
+/**
  * @section Overrides
  * Nudge and tweak alignment, spacing, and visibility.
  */
 /**
- * Text sizes
+ * Backgrounds
  */
 /* line 11, src/sass/components/_overrides.scss */
+.bg-muted {
+  background-color: #f7f7f7;
+}
+
+/**
+ * Text sizes
+ */
+/* line 20, src/sass/components/_overrides.scss */
 .text-small, .gmt-edd-link-to-product-in-cart {
   font-size: 0.9375em;
 }
 
-/* line 15, src/sass/components/_overrides.scss */
+/* line 24, src/sass/components/_overrides.scss */
 .text-large {
   font-size: 1.1875em;
   line-height: 1.4;
 }
 
 @media (min-width: 38em) {
-  /* line 15, src/sass/components/_overrides.scss */
+  /* line 24, src/sass/components/_overrides.scss */
   .text-large {
     font-size: 1.3125em;
   }
@@ -1392,7 +1420,7 @@ tfoot th {
 /**
  * Text colors
  */
-/* line 29, src/sass/components/_overrides.scss */
+/* line 38, src/sass/components/_overrides.scss */
 .text-muted, del, .gmt-edd-link-to-product-in-cart {
   color: #808080;
 }
@@ -1400,17 +1428,17 @@ tfoot th {
 /**
  * Margins
  */
-/* line 38, src/sass/components/_overrides.scss */
+/* line 47, src/sass/components/_overrides.scss */
 .no-margin {
   margin: 0;
 }
 
-/* line 42, src/sass/components/_overrides.scss */
+/* line 51, src/sass/components/_overrides.scss */
 .no-margin-top {
   margin-top: 0;
 }
 
-/* line 46, src/sass/components/_overrides.scss */
+/* line 55, src/sass/components/_overrides.scss */
 .no-margin-bottom, #edd_checkout_wrap fieldset, #edd_checkout_user_info p,
 #edd_cc_fields p,
 #edd_cc_address p,
@@ -1418,27 +1446,27 @@ tfoot th {
   margin-bottom: 0;
 }
 
-/* line 50, src/sass/components/_overrides.scss */
+/* line 59, src/sass/components/_overrides.scss */
 .margin-top {
   margin-top: 1.5625em;
 }
 
-/* line 54, src/sass/components/_overrides.scss */
+/* line 63, src/sass/components/_overrides.scss */
 .margin-bottom {
   margin-bottom: 1.5625em;
 }
 
-/* line 58, src/sass/components/_overrides.scss */
+/* line 67, src/sass/components/_overrides.scss */
 .margin-bottom-small, .error-field, #edd-payment-mode-wrap input[type="radio"] {
   margin-bottom: 0.5em;
 }
 
-/* line 62, src/sass/components/_overrides.scss */
+/* line 71, src/sass/components/_overrides.scss */
 .margin-bottom-large {
   margin-bottom: 2em;
 }
 
-/* line 66, src/sass/components/_overrides.scss */
+/* line 75, src/sass/components/_overrides.scss */
 .margin-right {
   margin-right: 0.25em;
 }
@@ -1446,62 +1474,62 @@ tfoot th {
 /**
  * Padding
  */
-/* line 75, src/sass/components/_overrides.scss */
+/* line 84, src/sass/components/_overrides.scss */
 .no-padding {
   padding: 0;
 }
 
-/* line 79, src/sass/components/_overrides.scss */
+/* line 88, src/sass/components/_overrides.scss */
 .no-padding-top {
   padding-top: 0;
 }
 
-/* line 83, src/sass/components/_overrides.scss */
+/* line 92, src/sass/components/_overrides.scss */
 .no-padding-bottom {
   padding-bottom: 0;
 }
 
-/* line 87, src/sass/components/_overrides.scss */
+/* line 96, src/sass/components/_overrides.scss */
 .padding-top {
   padding-top: 1.5625em;
 }
 
-/* line 91, src/sass/components/_overrides.scss */
+/* line 100, src/sass/components/_overrides.scss */
 .padding-top-small, .edd-cancel {
   padding-top: 0.5em;
 }
 
-/* line 95, src/sass/components/_overrides.scss */
+/* line 104, src/sass/components/_overrides.scss */
 .padding-top-medium {
   padding-top: 1em;
 }
 
-/* line 99, src/sass/components/_overrides.scss */
+/* line 108, src/sass/components/_overrides.scss */
 .padding-top-large {
   padding-top: 2em;
 }
 
-/* line 103, src/sass/components/_overrides.scss */
+/* line 112, src/sass/components/_overrides.scss */
 .padding-top-xlarge {
   padding-top: 3em;
 }
 
-/* line 107, src/sass/components/_overrides.scss */
+/* line 116, src/sass/components/_overrides.scss */
 .padding-bottom {
   padding-bottom: 1.5625em;
 }
 
-/* line 111, src/sass/components/_overrides.scss */
+/* line 120, src/sass/components/_overrides.scss */
 .padding-bottom-small {
   padding-bottom: 0.5em;
 }
 
-/* line 115, src/sass/components/_overrides.scss */
+/* line 124, src/sass/components/_overrides.scss */
 .padding-bottom-large {
   padding-bottom: 2em;
 }
 
-/* line 119, src/sass/components/_overrides.scss */
+/* line 128, src/sass/components/_overrides.scss */
 .padding-bottom-xlarge {
   padding-bottom: 3em;
 }
@@ -1514,7 +1542,7 @@ tfoot th {
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
-/* line 133, src/sass/components/_overrides.scss */
+/* line 142, src/sass/components/_overrides.scss */
 .screen-reader, .edd-self-service-label {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1532,7 +1560,7 @@ tfoot th {
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  * @link https://www.drupal.org/node/897638
  */
-/* line 150, src/sass/components/_overrides.scss */
+/* line 159, src/sass/components/_overrides.scss */
 .screen-reader-focusable:active,
 .screen-reader-focusable:focus {
   clip: auto;
@@ -1549,7 +1577,7 @@ tfoot th {
  * @affected IE 8/9/10
  * @link http://juicystudio.com/article/screen-readers-display-none.php
  */
-/* line 166, src/sass/components/_overrides.scss */
+/* line 175, src/sass/components/_overrides.scss */
 [hidden], template, .tarpit, label[for="edd-discount"], .js-edd #keel-edd-no-js-purchase-message, #edd_secure_site_wrapper, #edd_checkout_user_info legend,
 #edd_cc_fields legend,
 #edd_cc_address legend,
@@ -1569,7 +1597,7 @@ tfoot th {
  * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
  * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
  */
-/* line 178, src/sass/components/_overrides.scss */
+/* line 187, src/sass/components/_overrides.scss */
 .clearfix:before, .container:before,
 .row:before, #edd_cc_fields:before,
 #edd_cc_address:before, .edd-self-service-row:before, .nav-wrap:before,
@@ -1584,7 +1612,7 @@ tfoot th {
   content: " ";
 }
 
-/* line 184, src/sass/components/_overrides.scss */
+/* line 193, src/sass/components/_overrides.scss */
 .clearfix:after, .container:after,
 .row:after, #edd_cc_fields:after,
 #edd_cc_address:after, .edd-self-service-row:after, .nav-wrap:after {
