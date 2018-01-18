@@ -5,6 +5,15 @@
 
 
 /**
+ * Backgrounds
+ */
+
+.bg-muted {
+	background-color: lighten( $color-gray-light, 7% );
+}
+
+
+/**
  * Text sizes
  */
 
