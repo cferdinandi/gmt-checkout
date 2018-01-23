@@ -1,5 +1,5 @@
 /*!
- * gmt-checkout v1.1.0: Shopping cart for GoMakeThings.com
+ * gmt-checkout v1.2.0: Shopping cart for GoMakeThings.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gmt-checkout
@@ -1174,6 +1174,9 @@ select:focus {
   list-style: none;
   margin: 0 -0.5em;
   padding: 0;
+  /**
+	 * Active link styling
+	 */
 }
 
 @media (min-width: 60em) {
@@ -1189,6 +1192,22 @@ select:focus {
   float: none;
   margin-left: 0.5em;
   margin-right: 0.5em;
+}
+
+/* line 69, src/sass/components/_nav-main.scss */
+.nav a, .nav .link-block-styled {
+  color: #808080;
+  text-decoration: none;
+}
+
+/* line 77, src/sass/components/_nav-main.scss */
+.nav a:hover, .nav .link-block-styled:hover, .nav .link-block:hover .link-block-styled, .link-block:hover .nav .link-block-styled,
+.nav a:active,
+.nav .link-block-styled:active,
+.nav a:focus,
+.nav .link-block-styled:focus {
+  border-bottom: 0.125em solid #fa7176;
+  color: #272727;
 }
 
 /**

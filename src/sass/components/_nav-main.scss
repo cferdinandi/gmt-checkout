@@ -66,8 +66,19 @@
 		margin-right: calc-em(8px);
 	}
 
-	// a {
-	// 	color: $color-gray-dark;
-	// 	text-decoration: none;
-	// }
+	a {
+		color: $color-gray-dark;
+		text-decoration: none;
+	}
+
+	/**
+	 * Active link styling
+	 */
+	a:hover,
+	a:active,
+	a:focus {
+		border-bottom: calc-em(2px) solid $color-secondary;
+		color: $color-black;
+		// text-decoration: none;
+	}
 }
