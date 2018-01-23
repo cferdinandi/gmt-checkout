@@ -1,5 +1,5 @@
 /*!
- * gmt-checkout v1.1.0: Shopping cart for GoMakeThings.com
+ * gmt-checkout v1.2.0: Shopping cart for GoMakeThings.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gmt-checkout
