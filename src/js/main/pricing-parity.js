@@ -56,7 +56,7 @@
 		};
 
 		// Create and send a GET request
-		xhr.open('GET', 'http://localhost:8888/go-make-things-checkout//pricing-parity');
+		xhr.open('GET', '/pricing-parity');
 		xhr.responseType = 'document';
 		xhr.send();
 
