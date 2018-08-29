@@ -1,5 +1,5 @@
 /*!
- * gmt-checkout v1.3.2: Shopping cart for GoMakeThings.com
+ * gmt-checkout v1.3.3: Shopping cart for GoMakeThings.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gmt-checkout
@@ -1050,6 +1050,13 @@ return /******/ (function(modules) { // webpackBootstrap
 ;
 // JavaScript enabled
 document.documentElement.className += ' js-edd';
+
+// Hide checkbox value
+;(function (window, document, undefined) {
+	var mailchimp = document.getElementById('edd_mailchimp_signup');
+	if (!mailchimp) return;
+	mailchimp.type = 'hidden';
+})(window, document);
 /**
  * Load pricing parity message
  */
