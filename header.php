@@ -61,3 +61,20 @@
 		<main class="tabindex" id="main" tabindex="-1">
 
 			<div class="container">
+				<?php
+					$cart   = edd_get_payment_meta_cart_details( 1037, true );
+					// keel_print_a($cart);
+
+					if ( $cart ) {
+						foreach( $cart as $key => $item ) {
+							$item_id = explode( '_', $item['id'] );
+							keel_print_a($item_id);
+							// if ( has_term( 'membership-site', 'download_category',$item_id ) ) {
+							// 	return true;
+							// }
+						}
+					}
+
+					// keel_print_a(gmt_edd_apnte_downloads_have_membership_access( 1037 ));
+					// keel_print_a(edd_get_payment_meta_cart_details( 1037, true ));
+				?>

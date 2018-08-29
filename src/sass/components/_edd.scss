@@ -230,3 +230,8 @@ label[for="edd-discount"] {
 .edd_cart_item_image {
 	@extend [hidden];
 }
+
+// Hide mailchimp checkbox
+#edd_mailchimp {
+	@extend [hidden];
+}
