@@ -233,5 +233,5 @@ label[for="edd-discount"] {
 
 // Hide mailchimp checkbox
 #edd_mailchimp {
-	@extend [hidden];
+	@extend .screen-reader;
 }

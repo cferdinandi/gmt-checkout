@@ -1,5 +1,5 @@
 /*!
- * gmt-checkout v1.3.3: Shopping cart for GoMakeThings.com
+ * gmt-checkout v1.3.4: Shopping cart for GoMakeThings.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gmt-checkout
@@ -1562,7 +1562,7 @@ tfoot th {
  * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 /* line 142, src/sass/components/_overrides.scss */
-.screen-reader, .edd-self-service-label {
+.screen-reader, .edd-self-service-label, #edd_mailchimp {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1606,7 +1606,7 @@ tfoot th {
 #edd-support-wrap .edd-required-indicator, #edd_checkout_user_info .edd-description,
 #edd_cc_fields .edd-description,
 #edd_cc_address .edd-description,
-#edd-support-wrap .edd-description, #edd_error_no_token, .edd_cart_item_image, #edd_mailchimp {
+#edd-support-wrap .edd-description, #edd_error_no_token, .edd_cart_item_image {
   display: none;
   visibility: hidden;
 }
