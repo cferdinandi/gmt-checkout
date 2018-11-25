@@ -47,12 +47,9 @@ label[for="edd-discount"] {
 	font-weight: bold;
 }
 
-#edd-payment-mode-wrap fieldset {
+#edd-payment-mode-wrap [type="radio"] {
 	@extend .margin-bottom-small;
-
-	[type="radio"] {
-		margin-right: calc-em(8px);
-	}
+	margin-right: calc-em(8px);
 }
 
 // #edd_payment_mode_submit,
@@ -187,8 +184,12 @@ label[for="edd-discount"] {
 }
 
 // Payment Method Select
-#edd_payment_mode_select legend {
-	font-weight: bold;
+#edd_payment_mode_select {
+	@extend .margin-bottom-small;
+
+	legend {
+		font-weight: bold;
+	}
 }
 
 // Adjust the expiration fields

@@ -1,5 +1,5 @@
 /*!
- * gmt-checkout v1.4.2: Shopping cart for GoMakeThings.com
+ * gmt-checkout v1.4.3: Shopping cart for GoMakeThings.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gmt-checkout
@@ -1333,25 +1333,25 @@ tfoot th {
   font-weight: bold;
 }
 
-/* line 53, src/sass/components/_edd.scss */
-#edd-payment-mode-wrap fieldset [type="radio"] {
+/* line 50, src/sass/components/_edd.scss */
+#edd-payment-mode-wrap [type="radio"] {
   margin-right: 0.5em;
 }
 
 /**
  * Payment icons
  */
-/* line 73, src/sass/components/_edd.scss */
+/* line 70, src/sass/components/_edd.scss */
 .edd-payment-icons .icon {
   fill: #808080;
 }
 
-/* line 76, src/sass/components/_edd.scss */
+/* line 73, src/sass/components/_edd.scss */
 .edd-payment-icons .icon.active {
   fill: #0088cc;
 }
 
-/* line 81, src/sass/components/_edd.scss */
+/* line 78, src/sass/components/_edd.scss */
 .edd-payment-icons .icon {
   height: 1.75em;
 }
@@ -1359,13 +1359,13 @@ tfoot th {
 /**
  * "Complete Purchase" button
  */
-/* line 90, src/sass/components/_edd.scss */
+/* line 87, src/sass/components/_edd.scss */
 #edd-purchase-button {
   display: none;
   visibility: hidden;
 }
 
-/* line 95, src/sass/components/_edd.scss */
+/* line 92, src/sass/components/_edd.scss */
 .js-edd #edd-purchase-button {
   display: inline-block;
   visibility: visible;
@@ -1374,13 +1374,13 @@ tfoot th {
 /**
  * Cancel button
  */
-/* line 110, src/sass/components/_edd.scss */
+/* line 107, src/sass/components/_edd.scss */
 .edd-cancel {
   display: none;
   visibility: hidden;
 }
 
-/* line 115, src/sass/components/_edd.scss */
+/* line 112, src/sass/components/_edd.scss */
 .js-edd-cancel .edd-cancel {
   display: block;
   visibility: visible;
@@ -1392,7 +1392,7 @@ tfoot th {
 /**
  * Credit Card Fields
  */
-/* line 170, src/sass/components/_edd.scss */
+/* line 167, src/sass/components/_edd.scss */
 #edd_checkout_user_info .edd-label,
 #edd_cc_fields .edd-label,
 #edd_cc_address .edd-label,
@@ -1493,7 +1493,7 @@ tfoot th {
 }
 
 /* line 67, src/sass/components/_overrides.scss */
-.margin-bottom-small, .error-field, .edd-payment-mode-label, #edd-payment-mode-wrap fieldset {
+.margin-bottom-small, .error-field, .edd-payment-mode-label, #edd-payment-mode-wrap [type="radio"], #edd_payment_mode_select {
   margin-bottom: 0.5em;
 }
 
