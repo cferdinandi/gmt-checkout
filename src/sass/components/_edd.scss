@@ -184,7 +184,7 @@ label[for="edd-discount"] {
 }
 
 // Payment Method Select
-#edd_payment_mode_select {
+fieldset#edd_payment_mode_select {
 	@extend .margin-bottom-small;
 
 	legend {
