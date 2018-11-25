@@ -1,5 +1,5 @@
 /*!
- * gmt-checkout v1.4.1: Shopping cart for GoMakeThings.com
+ * gmt-checkout v1.4.2: Shopping cart for GoMakeThings.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gmt-checkout
@@ -1334,7 +1334,7 @@ tfoot th {
 }
 
 /* line 53, src/sass/components/_edd.scss */
-fieldset#edd-payment-mode-wrap [type="radio"] {
+#edd-payment-mode-wrap fieldset [type="radio"] {
   margin-right: 0.5em;
 }
 
@@ -1493,7 +1493,7 @@ fieldset#edd-payment-mode-wrap [type="radio"] {
 }
 
 /* line 67, src/sass/components/_overrides.scss */
-.margin-bottom-small, .error-field, .edd-payment-mode-label, fieldset#edd-payment-mode-wrap {
+.margin-bottom-small, .error-field, .edd-payment-mode-label, #edd-payment-mode-wrap fieldset {
   margin-bottom: 0.5em;
 }
 

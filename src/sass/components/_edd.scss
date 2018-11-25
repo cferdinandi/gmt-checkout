@@ -47,7 +47,7 @@ label[for="edd-discount"] {
 	font-weight: bold;
 }
 
-fieldset#edd-payment-mode-wrap {
+#edd-payment-mode-wrap fieldset {
 	@extend .margin-bottom-small;
 
 	[type="radio"] {
