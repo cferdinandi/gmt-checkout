@@ -43,11 +43,13 @@ label[for="edd-discount"] {
  * Select payment type
  */
 .edd-payment-mode-label {
+	@extend .margin-bottom-small;
 	font-weight: bold;
 }
 
-#edd-payment-mode-wrap input[type="radio"] {
+#edd-payment-mode-wrap [type="radio"] {
 	@extend .margin-bottom-small;
+	margin-right: calc-em(8px);
 }
 
 // #edd_payment_mode_submit,
@@ -181,6 +183,10 @@ label[for="edd-discount"] {
 
 }
 
+// Payment Method Select
+#edd_payment_mode_select legend {
+	font-weight: bold;
+}
 
 // Adjust the expiration fields
 #card_exp_month,
@@ -231,7 +237,7 @@ label[for="edd-discount"] {
 	@extend [hidden];
 }
 
-// Hide mailchimp checkbox
-#edd_mailchimp {
-	@extend .screen-reader;
-}
+// // Hide mailchimp checkbox
+// #edd_mailchimp {
+// 	@extend .screen-reader;
+// }

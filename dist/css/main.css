@@ -1,5 +1,5 @@
 /*!
- * gmt-checkout v1.3.4: Shopping cart for GoMakeThings.com
+ * gmt-checkout v1.4.0: Shopping cart for GoMakeThings.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gmt-checkout
@@ -720,7 +720,7 @@ q:after {
 }
 
 /* line 18, src/sass/components/_buttons.scss */
-.btn, input[type="submit"], .edd-self-service-button, .gmt-edd-slack-form-button, .btn:visited, input[type="submit"]:visited, .edd-self-service-button:visited, .gmt-edd-slack-form-button:visited {
+.btn, input[type="submit"], .edd-self-service-button, .gmt-edd-slack-form-button, .btn:visited, input:visited[type="submit"], .edd-self-service-button:visited, .gmt-edd-slack-form-button:visited {
   color: #ffffff;
 }
 
@@ -730,13 +730,13 @@ a.btn, .btn.link-block-styled, input.link-block-styled[type="submit"], .link-blo
 }
 
 /* line 28, src/sass/components/_buttons.scss */
-.btn:hover, input[type="submit"]:hover, .edd-self-service-button:hover, .gmt-edd-slack-form-button:hover,
+.btn:hover, input:hover[type="submit"], .edd-self-service-button:hover, .gmt-edd-slack-form-button:hover,
 .btn:focus,
-input[type="submit"]:focus,
+input:focus[type="submit"],
 .edd-self-service-button:focus,
 .gmt-edd-slack-form-button:focus,
 .btn:active,
-input[type="submit"]:active,
+input:active[type="submit"],
 .edd-self-service-button:active,
 .gmt-edd-slack-form-button:active,
 .btn.active,
@@ -756,18 +756,25 @@ input.active[type="submit"],
 
 /* line 48, src/sass/components/_buttons.scss */
 .btn-secondary:hover,
-a .btn-secondary:hover, .link-block-styled .btn-secondary:hover,
+a .btn-secondary:hover,
+.link-block-styled .btn-secondary:hover,
 .btn-secondary:focus,
-a .btn-secondary:focus, .link-block-styled .btn-secondary:focus,
+a .btn-secondary:focus,
+.link-block-styled .btn-secondary:focus,
 .btn-secondary:active,
-a .btn-secondary:active, .link-block-styled .btn-secondary:active,
+a .btn-secondary:active,
+.link-block-styled .btn-secondary:active,
 .btn-secondary.active {
   background-color: #343434;
   border-color: #343434;
 }
 
 /* line 59, src/sass/components/_buttons.scss */
-.btn:active, input[type="submit"]:active, .edd-self-service-button:active, .gmt-edd-slack-form-button:active,
+
+.btn:active,
+input:active[type="submit"],
+.edd-self-service-button:active,
+.gmt-edd-slack-form-button:active,
 .btn.active,
 input.active[type="submit"],
 .active.edd-self-service-button,
@@ -780,8 +787,8 @@ input.active[type="submit"],
 .btn.disabled, input.disabled[type="submit"], .disabled.edd-self-service-button, .disabled.gmt-edd-slack-form-button,
 .btn[disabled],
 input[disabled][type="submit"],
-[disabled].edd-self-service-button,
-[disabled].gmt-edd-slack-form-button {
+.edd-self-service-button[disabled],
+.gmt-edd-slack-form-button[disabled] {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0.5;
@@ -799,11 +806,11 @@ input[disabled][type="submit"],
 /* line 80, src/sass/components/_buttons.scss */
 .btn-block, .edd-self-service-button,
 input[type="submit"].btn-block,
-input[type="submit"].edd-self-service-button,
+input.edd-self-service-button[type="submit"],
 input[type="reset"].btn-block,
-input[type="reset"].edd-self-service-button,
+input.edd-self-service-button[type="reset"],
 input[type="button"].btn-block,
-input[type="button"].edd-self-service-button {
+input.edd-self-service-button[type="button"] {
   display: block;
   width: 100%;
   margin-right: 0;
@@ -829,7 +836,7 @@ input[type="submit"] {
 }
 
 /* line 108, src/sass/components/_buttons.scss */
-.btn:last-child, input[type="submit"]:last-child, .edd-self-service-button:last-child, .gmt-edd-slack-form-button:last-child,
+.btn:last-child, input:last-child[type="submit"], .edd-self-service-button:last-child, .gmt-edd-slack-form-button:last-child,
 input.btn,
 input[type="submit"],
 input.edd-self-service-button,
@@ -1326,20 +1333,25 @@ tfoot th {
   font-weight: bold;
 }
 
+/* line 50, src/sass/components/_edd.scss */
+#edd-payment-mode-wrap [type="radio"] {
+  margin-right: 0.5em;
+}
+
 /**
  * Payment icons
  */
-/* line 68, src/sass/components/_edd.scss */
+/* line 70, src/sass/components/_edd.scss */
 .edd-payment-icons .icon {
   fill: #808080;
 }
 
-/* line 71, src/sass/components/_edd.scss */
+/* line 73, src/sass/components/_edd.scss */
 .edd-payment-icons .icon.active {
   fill: #0088cc;
 }
 
-/* line 76, src/sass/components/_edd.scss */
+/* line 78, src/sass/components/_edd.scss */
 .edd-payment-icons .icon {
   height: 1.75em;
 }
@@ -1347,13 +1359,13 @@ tfoot th {
 /**
  * "Complete Purchase" button
  */
-/* line 85, src/sass/components/_edd.scss */
+/* line 87, src/sass/components/_edd.scss */
 #edd-purchase-button {
   display: none;
   visibility: hidden;
 }
 
-/* line 90, src/sass/components/_edd.scss */
+/* line 92, src/sass/components/_edd.scss */
 .js-edd #edd-purchase-button {
   display: inline-block;
   visibility: visible;
@@ -1362,13 +1374,13 @@ tfoot th {
 /**
  * Cancel button
  */
-/* line 105, src/sass/components/_edd.scss */
+/* line 107, src/sass/components/_edd.scss */
 .edd-cancel {
   display: none;
   visibility: hidden;
 }
 
-/* line 110, src/sass/components/_edd.scss */
+/* line 112, src/sass/components/_edd.scss */
 .js-edd-cancel .edd-cancel {
   display: block;
   visibility: visible;
@@ -1380,13 +1392,18 @@ tfoot th {
 /**
  * Credit Card Fields
  */
-/* line 165, src/sass/components/_edd.scss */
+/* line 167, src/sass/components/_edd.scss */
 #edd_checkout_user_info .edd-label,
 #edd_cc_fields .edd-label,
 #edd_cc_address .edd-label,
 #edd-support-wrap .edd-label {
   font-weight: bold;
   margin-bottom: 0.25em;
+}
+
+/* line 187, src/sass/components/_edd.scss */
+#edd_payment_mode_select legend {
+  font-weight: bold;
 }
 
 /**
@@ -1476,7 +1493,7 @@ tfoot th {
 }
 
 /* line 67, src/sass/components/_overrides.scss */
-.margin-bottom-small, .error-field, #edd-payment-mode-wrap input[type="radio"] {
+.margin-bottom-small, .error-field, .edd-payment-mode-label, #edd-payment-mode-wrap [type="radio"] {
   margin-bottom: 0.5em;
 }
 
@@ -1562,7 +1579,7 @@ tfoot th {
  * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 /* line 142, src/sass/components/_overrides.scss */
-.screen-reader, .edd-self-service-label, #edd_mailchimp {
+.screen-reader, .edd-self-service-label {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1632,9 +1649,14 @@ tfoot th {
 }
 
 /* line 193, src/sass/components/_overrides.scss */
-.clearfix:after, .container:after,
-.row:after, #edd_cc_fields:after,
-#edd_cc_address:after, .edd-self-service-row:after, .nav-wrap:after {
+
+.clearfix:after,
+.container:after,
+.row:after,
+#edd_cc_fields:after,
+#edd_cc_address:after,
+.edd-self-service-row:after,
+.nav-wrap:after {
   clear: both;
 }
 
@@ -1674,14 +1696,14 @@ tfoot th {
 	 * Show URL after links
 	 */
   /* line 38, src/sass/components/_print.scss */
-  a[href]:after, [href].link-block-styled:after {
+  a[href]:after, .link-block-styled[href]:after {
     content: " (" attr(href) ")";
   }
   /**
 	 * Don't show URL for internal links
 	 */
   /* line 45, src/sass/components/_print.scss */
-  a[href^="#"]:after, [href^="#"].link-block-styled:after {
+  a[href^="#"]:after, .link-block-styled[href^="#"]:after {
     content: "";
   }
   /**
