@@ -1,9 +1,9 @@
 /*!
- * gmt-checkout v1.4.4: Shopping cart for GoMakeThings.com
- * (c) 2018 Chris Ferdinandi
+ * gmt-checkout v1.5.4
+ * The WordPress theme for GoMakeThings.com
+ * (c) 2019 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gmt-checkout
- * Open Source Credits: https://github.com/toddmotto/fluidvids, http://prismjs.com, https://github.com/filamentgroup/loadJS/, https://github.com/filamentgroup/loadCSS, https://github.com/bramstein/fontfaceobserver, https://github.com/muffinresearch/payment-icons, https://nosir.github.io/cleave.js/
  */
 
 /**
@@ -49,7 +49,8 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /**
@@ -81,6 +82,7 @@ html {
   overflow-y: scroll;
   /* 2 */
   -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
   /* 3 */
@@ -567,7 +569,8 @@ hr {
   border: 0;
   border-top: 0.0725em solid #e5e5e5;
   border-bottom: 0 solid transparent;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -614,7 +617,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -633,6 +637,7 @@ dfn {
 mark,
 .highlight {
   background-color: #fbf89a;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fbf89a), to(#fbf9c9));
   background-image: linear-gradient(to right, #fbf89a 0%, #fbf9c9 100%);
   color: #272727;
 }
@@ -706,7 +711,7 @@ q:after {
  * Styling for CSS buttons.
  */
 /* line 6, src/sass/components/_buttons.scss */
-.btn, input[type="submit"], .edd-self-service-button, .gmt-edd-slack-form-button {
+.btn, input[type="submit"], .edd-self-service-button {
   background-color: #f7272f;
   border: 0.125em solid #f7272f;
   border-radius: 0.0725em;
@@ -720,29 +725,26 @@ q:after {
 }
 
 /* line 18, src/sass/components/_buttons.scss */
-.btn, input[type="submit"], .edd-self-service-button, .gmt-edd-slack-form-button, .btn:visited, input:visited[type="submit"], .edd-self-service-button:visited, .gmt-edd-slack-form-button:visited {
+.btn, input[type="submit"], .edd-self-service-button, .btn:visited, input:visited[type="submit"], .edd-self-service-button:visited {
   color: #ffffff;
 }
 
 /* line 24, src/sass/components/_buttons.scss */
-a.btn, .btn.link-block-styled, input.link-block-styled[type="submit"], .link-block-styled.edd-self-service-button, .link-block-styled.gmt-edd-slack-form-button, a.edd-self-service-button, a.gmt-edd-slack-form-button {
+a.btn, .btn.link-block-styled, input.link-block-styled[type="submit"], .link-block-styled.edd-self-service-button, a.edd-self-service-button {
   text-decoration: none;
 }
 
 /* line 28, src/sass/components/_buttons.scss */
-.btn:hover, input:hover[type="submit"], .edd-self-service-button:hover, .gmt-edd-slack-form-button:hover,
+.btn:hover, input:hover[type="submit"], .edd-self-service-button:hover,
 .btn:focus,
 input:focus[type="submit"],
 .edd-self-service-button:focus,
-.gmt-edd-slack-form-button:focus,
 .btn:active,
 input:active[type="submit"],
 .edd-self-service-button:active,
-.gmt-edd-slack-form-button:active,
 .btn.active,
 input.active[type="submit"],
-.active.edd-self-service-button,
-.active.gmt-edd-slack-form-button {
+.active.edd-self-service-button {
   background-color: #cb070e;
   border-color: #cb070e;
   color: #ffffff;
@@ -774,26 +776,25 @@ a .btn-secondary:active,
 .btn:active,
 input:active[type="submit"],
 .edd-self-service-button:active,
-.gmt-edd-slack-form-button:active,
 .btn.active,
 input.active[type="submit"],
-.active.edd-self-service-button,
-.active.gmt-edd-slack-form-button {
-  box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
+.active.edd-self-service-button {
+  -webkit-box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 0.0725em 0.15625em rgba(0, 0, 0, 0.05);
   outline: 0;
 }
 
 /* line 65, src/sass/components/_buttons.scss */
-.btn.disabled, input.disabled[type="submit"], .disabled.edd-self-service-button, .disabled.gmt-edd-slack-form-button,
+.btn.disabled, input.disabled[type="submit"], .disabled.edd-self-service-button,
 .btn[disabled],
 input[disabled][type="submit"],
-.edd-self-service-button[disabled],
-.gmt-edd-slack-form-button[disabled] {
+.edd-self-service-button[disabled] {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0.5;
   filter: alpha(opacity=50);
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* line 74, src/sass/components/_buttons.scss */
@@ -819,7 +820,7 @@ input.edd-self-service-button[type="button"] {
 }
 
 /* line 91, src/sass/components/_buttons.scss */
-.btn, input[type="submit"], .edd-self-service-button, .gmt-edd-slack-form-button,
+.btn, input[type="submit"], .edd-self-service-button,
 button,
 html input[type="button"],
 input[type="reset"],
@@ -836,11 +837,10 @@ input[type="submit"] {
 }
 
 /* line 108, src/sass/components/_buttons.scss */
-.btn:last-child, input:last-child[type="submit"], .edd-self-service-button:last-child, .gmt-edd-slack-form-button:last-child,
+.btn:last-child, input:last-child[type="submit"], .edd-self-service-button:last-child,
 input.btn,
 input[type="submit"],
-input.edd-self-service-button,
-input.gmt-edd-slack-form-button {
+input.edd-self-service-button {
   margin-right: 0;
 }
 
@@ -995,7 +995,8 @@ button:-moz-focusring,
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
-  box-shadow: inset 0 0.0725em 0.0725em rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
+  -webkit-box-shadow: inset 0 0.0725em 0.0725em rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 0.0725em 0.0725em rgba(0, 0, 0, 0.075), 0 0 0.5em rgba(82, 168, 236, 0.6);
   outline: 0;
   outline: thin dotted \9;
 }
@@ -1064,6 +1065,7 @@ select:focus {
   padding-left: 0.9375em;
   padding-right: 2.5em;
   border-radius: 1.3125em;
+  -webkit-transition: width 300ms ease-in;
   transition: width 300ms ease-in;
 }
 
@@ -1407,20 +1409,6 @@ fieldset#edd_payment_mode_select legend {
 }
 
 /**
- * @section Slack
- * Custom overrides for Slack Invites
- */
-/* line 7, src/sass/components/_slack.scss */
-.gmt-edd-slack-form-label {
-  font-weight: bold;
-}
-
-/* line 16, src/sass/components/_slack.scss */
-.gmt-edd-slack-alert {
-  font-style: italic;
-}
-
-/**
  * @section Overrides
  * Nudge and tweak alignment, spacing, and visibility.
  */
@@ -1674,7 +1662,8 @@ fieldset#edd_payment_mode_select legend {
   * {
     background: transparent !important;
     color: #000 !important;
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important;
   }
   /**

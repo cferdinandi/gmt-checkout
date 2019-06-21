@@ -92,6 +92,17 @@
 
 
 	/**
+	 * GDPR Message
+	 */
+	function keel_edd_gdpr_message() {
+		$options = keel_get_theme_options();
+		echo $options['gdpr'];
+	}
+	add_action( 'edd_purchase_form_after_submit', 'keel_edd_gdpr_message' );
+
+
+
+	/**
 	 * Remove the "Go Back" button from non-ajax implementations
 	 */
 	function keel_edd_checkout_submit() {

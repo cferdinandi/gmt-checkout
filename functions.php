@@ -12,9 +12,7 @@
 	function keel_load_theme_files() {
 		$keel_theme = wp_get_theme();
 		wp_enqueue_style( 'keel-theme-styles', get_template_directory_uri() . '/dist/css/main.min.' . $keel_theme->get( 'Version' ) . '.css', null, null, 'all' );
-		if ( isset($_COOKIE['fontsLoaded']) && $_COOKIE['fontsLoaded'] === 'true' ) {
-			wp_enqueue_style( 'keel-theme-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700', null, null, 'all' );
-		}
+		wp_enqueue_style( 'keel-theme-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700', null, null, 'all' );
 	}
 	add_action('wp_enqueue_scripts', 'keel_load_theme_files');
 
@@ -27,18 +25,18 @@
 		$keel_theme = wp_get_theme();
 
 		?>
+		<?php if ( !isset($_COOKIE['fontsLoaded']) || $_COOKIE['fontsLoaded'] !== 'true' ) : ?>
 			<script>
-				<?php echo file_get_contents( get_template_directory_uri() . '/dist/js/detects.min.' . $keel_theme->get( 'Version' ) . '.js' ); ?>
-				<?php if ( !isset($_COOKIE['fontsLoaded']) || $_COOKIE['fontsLoaded'] !== 'true' ) : ?>
-					loadCSS('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i');
-					var font = new FontFaceObserver('PT Serif');
-					font.load().then(function () {
+				;(function () {
+					if (!('fonts' in document)) return;
+					document.fonts.load('1em PT Serif').then(function () {
 						var expires = new Date(+new Date() + (7 * 24 * 60 * 60 * 1000)).toUTCString();
 						document.cookie = 'fontsLoaded=true; expires=' + expires;
 						document.documentElement.className += ' fonts-loaded';
 					});
-				<?php endif; ?>
+				})();
 			</script>
+		<?php endif; ?>
 		<?php
 	}
 	add_action('wp_head', 'keel_load_inline_header', 30);

@@ -56,7 +56,7 @@
 		};
 
 		// Create and send a GET request
-		xhr.open('GET', '/pricing-parity');
+		xhr.open('GET', '/checkout/pricing-parity');
 		xhr.responseType = 'document';
 		xhr.send();
 

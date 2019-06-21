@@ -1,9 +1,9 @@
 /*!
- * gmt-checkout v1.4.4: Shopping cart for GoMakeThings.com
- * (c) 2018 Chris Ferdinandi
+ * gmt-checkout v1.5.4
+ * The WordPress theme for GoMakeThings.com
+ * (c) 2019 Chris Ferdinandi
  * MIT License
  * https://github.com/cferdinandi/gmt-checkout
- * Open Source Credits: https://github.com/toddmotto/fluidvids, http://prismjs.com, https://github.com/filamentgroup/loadJS/, https://github.com/filamentgroup/loadCSS, https://github.com/bramstein/fontfaceobserver, https://github.com/muffinresearch/payment-icons, https://nosir.github.io/cleave.js/
  */
 
 /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
