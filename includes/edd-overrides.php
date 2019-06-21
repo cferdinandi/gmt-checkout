@@ -96,7 +96,7 @@
 	 */
 	function keel_edd_gdpr_message() {
 		$options = keel_get_theme_options();
-		echo $options['gdpr'];
+		echo esc_html( $options['gdpr'] );
 	}
 	add_action( 'edd_purchase_form_after_submit', 'keel_edd_gdpr_message' );
 
