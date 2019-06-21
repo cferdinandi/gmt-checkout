@@ -271,7 +271,7 @@ var buildTheme = function (done) {
 
 	// Build WP Theme
 	return src(paths.theme.input)
-		.pipe(header(banner.full, { package : package }))
+		.pipe(header(banner.theme, { package : package }))
 		.pipe(dest(paths.theme.output));
 
 };
