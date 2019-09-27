@@ -18,6 +18,12 @@ body {
 	@media (min-width: $bp-medium) {
 		line-height: 1.5625;
 	}
+
+	@media (prefers-color-scheme: dark) {
+		background: $color-black;
+		border-top-color: $color-gray-dark;
+		color: $color-white;
+	}
 }
 
 p {
@@ -55,6 +61,20 @@ a {
 	// &:visited {
 	// 	color: $color-accent;
 	// }
+
+	@media (prefers-color-scheme: dark) {
+		color: $color-primary-dark;
+
+		&:active,
+		&:focus,
+		&:hover {
+			color: darken( $color-primary-dark, 15% );
+		}
+
+		// &:visited {
+		// 	color: $color-accent-dark;
+		// }
+	}
 }
 
 
@@ -96,6 +116,10 @@ a.link-block {
 	color: $color-black;
 	display: block;
 	text-decoration: none;
+
+	@media (prefers-color-scheme: dark) {
+		color: $color-white;
+	}
 }
 
 .link-block-styled {
@@ -274,6 +298,10 @@ hr {
 	height: 0; /* 1 */
 	margin: calc-em(32px) auto;
 	overflow: visible; /* 2 */
+
+	@media (prefers-color-scheme: dark) {
+		border-top-color: $color-gray-dark;
+	}
 }
 
 .line-secondary {
@@ -321,11 +349,14 @@ dfn {
 /**
  * Address styling not present in IE 8/9.
  */
-mark,
-.highlight {
-	background-color: #fbf89a;
-	background-image: linear-gradient(to right, #fbf89a 0%, #fbf9c9 100%);
+mark {
+	background: #fbf9c9;
 	color: $color-black;
+
+	@media (prefers-color-scheme: dark) {
+		background: transparent;
+		color: $color-white;
+	}
 }
 
 /**

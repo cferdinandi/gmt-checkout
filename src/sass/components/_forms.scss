@@ -36,6 +36,11 @@ textarea {
 	font: inherit; /* 2 */
 	margin: 0; /* 3 */
 	padding: calc-em(5px);
+
+	@media (prefers-color-scheme: dark) {
+		background-color: $color-gray-light;
+		color: $color-black;
+	}
 }
 
 /**
@@ -67,6 +72,10 @@ textarea {
 
 	@media (min-width: $bp-medium) {
 		line-height: 1.5625;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		border-color: $color-gray-dark;
 	}
 }
 
@@ -199,6 +208,9 @@ select:focus {
 	font: inherit; /* 2 */
 }
 
+/**
+ * Create rounded search bar
+ */
 .input-search {
 	width: 85%;
 	padding-left: calc-em(15px);
@@ -211,6 +223,10 @@ select:focus {
 	}
 }
 
+
+/**
+ * Special styling for search icon as button
+ */
 .btn-search {
 	display: inline;
 	color: $color-gray-dark;
@@ -218,18 +234,26 @@ select:focus {
 	background: none;
 	margin-left: calc-em(-40px);
 	margin-bottom: 0;
-}
 
-.btn-search:hover {
-	color: darken( $color-gray-dark, 15% );
-}
+	svg {
+		fill: $color-gray-dark;
 
-.btn-search .icon {
-	fill: $color-gray-dark;
-}
+		@media (prefers-color-scheme: dark) {
+			fill: $color-black;
+		}
+	}
 
-.btn-search:hover .icon {
-	fill: darken( $color-gray-dark, 15% );
+	&:hover {
+		color: darken( $color-gray-dark, 15% );
+
+		svg {
+			fill: darken( $color-gray-dark, 15% );
+
+			@media (prefers-color-scheme: dark) {
+				fill: $color-black-dark;
+			}
+		}
+	}
 }
 
 
@@ -239,6 +263,10 @@ select:focus {
 .error-field {
 	@extend .margin-bottom-small;
 	border-color: darken( $color-secondary, 25% );
+
+	@media (prefers-color-scheme: dark) {
+		border-color: lighten( $color-secondary, 15% );
+	}
 }
 
 .error-message,
@@ -246,4 +274,8 @@ select:focus {
 	color: darken( $color-secondary, 25% );
 	font-style: italic;
 	margin-bottom: 1em;
+
+	@media (prefers-color-scheme: dark) {
+		color: lighten( $color-secondary, 15% );
+	}
 }
