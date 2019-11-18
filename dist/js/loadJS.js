@@ -1,5 +1,5 @@
 /*!
- * gmt-checkout v1.6.0
+ * gmt-checkout v1.7.0
  * The WordPress theme for GoMakeThings.com
  * (c) 2019 Chris Ferdinandi
  * MIT License
