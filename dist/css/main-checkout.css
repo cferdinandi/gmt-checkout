@@ -997,7 +997,7 @@ textarea:focus {
  * Inline inputs
  */
 .input-inline, #card_exp_month,
-#card_exp_year {
+#card_exp_year, .edd-apply-discount {
 	display: inline-block;
 	vertical-align: middle;
 	width: auto;
