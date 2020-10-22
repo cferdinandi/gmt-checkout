@@ -11,35 +11,13 @@
 	 */
 	function keel_load_theme_files() {
 		$keel_theme = wp_get_theme();
-		wp_enqueue_style( 'keel-theme-styles', get_template_directory_uri() . '/dist/css/main.min.' . $keel_theme->get( 'Version' ) . '.css', null, null, 'all' );
-		wp_enqueue_style( 'keel-theme-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700', null, null, 'all' );
+		wp_enqueue_style( 'keel-theme-fonts', get_template_directory_uri() . '/dist/css/fonts.css', null, null, 'all' );
+		wp_enqueue_style( 'keel-theme-styles', get_template_directory_uri() . '/dist/css/main-checkout.min.css', null, null, 'all' );
+		wp_enqueue_script( 'keel-theme-font-detects', get_template_directory_uri() . '/dist/js/fonts.min.js', null, null, null );
+		wp_enqueue_script( 'keel-theme-scripts', get_template_directory_uri() . '/dist/js/edd.min.js', null, null, true );
+		wp_enqueue_script( 'keel-theme-sw', get_template_directory_uri() . '/dist/js/swInit.min.js', null, null, true );
 	}
 	add_action('wp_enqueue_scripts', 'keel_load_theme_files');
-
-
-
-	/**
-	 * Load inline header content
-	 */
-	function keel_load_inline_header() {
-		$keel_theme = wp_get_theme();
-
-		?>
-		<?php if ( !isset($_COOKIE['fontsLoaded']) || $_COOKIE['fontsLoaded'] !== 'true' ) : ?>
-			<script>
-				;(function () {
-					if (!('fonts' in document)) return;
-					document.fonts.load('1em PT Serif').then(function () {
-						var expires = new Date(+new Date() + (7 * 24 * 60 * 60 * 1000)).toUTCString();
-						document.cookie = 'fontsLoaded=true; expires=' + expires;
-						document.documentElement.className += ' fonts-loaded';
-					});
-				})();
-			</script>
-		<?php endif; ?>
-		<?php
-	}
-	add_action('wp_head', 'keel_load_inline_header', 30);
 
 
 
@@ -48,19 +26,12 @@
 	 */
 	function keel_load_inline_footer() {
 		global $post;
-		$keel_theme = wp_get_theme();
 		$get_checkout = function_exists( 'edd_get_option' ) ? edd_get_option( 'purchase_page', false ) : null;
-
 		?>
 			<script>
-				// Asynchronously load JavaScript if browser passes mustard test
-				<?php echo file_get_contents( get_template_directory_uri() . '/dist/js/loadJS.min.' . $keel_theme->get( 'Version' ) . '.js' ); ?>
-				if ( 'querySelector' in document && 'addEventListener' in window ) {
-					loadJS('<?php echo get_template_directory_uri() . "/dist/js/main.min." . $keel_theme->get( "Version" ) . ".js"; ?>');
-					<?php if ( !empty( $get_checkout ) && is_page( $get_checkout ) && empty( edd_get_option('stripe_checkout') ) ) : ?>
-						jQuery.fn.validateCreditCard = function () {};
-					<?php endif; ?>
-				}
+				<?php if ( !empty( $get_checkout ) && is_page( $get_checkout ) && empty( edd_get_option('stripe_checkout') ) ) : ?>
+					jQuery.fn.validateCreditCard = function () {};
+				<?php endif; ?>
 			</script>
 		<?php
 	}
