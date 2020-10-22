@@ -734,7 +734,7 @@ pre code {
 /**
  * Primary buttons
  */
-.btn, #edd-purchase-button {
+.btn, .edd-submit {
 	background-color: #f7272f;
 	border: 0.125em solid #f7272f;
 	display: inline-block;
@@ -745,29 +745,29 @@ pre code {
 	margin-bottom: 0.3125em;
 	padding: 0.5em 0.6875em;
 }
-.btn, #edd-purchase-button, .btn:focus, .btn:visited {
+.btn, .edd-submit, .btn:focus, .btn:visited {
 	color: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
-	.btn, #edd-purchase-button, .btn:focus, .btn:visited {
+	.btn, .edd-submit, .btn:focus, .btn:visited {
 		background-color: #fdd4d5;
 		border-color: #fdd4d5;
 		color: #000000;
 	}
 }
-.btn:hover, #edd-purchase-button:hover, .btn:active, #edd-purchase-button:active {
+.btn:hover, .edd-submit:hover, .btn:active, .edd-submit:active {
 	background-color: #cb070e;
 	border-color: #cb070e;
 	color: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
-	.btn:hover, #edd-purchase-button:hover, .btn:active, #edd-purchase-button:active {
+	.btn:hover, .edd-submit:hover, .btn:active, .edd-submit:active {
 		background-color: #fdbbbd;
 		border-color: #fdbbbd;
 		color: #000000;
 	}
 }
-a.btn, a#edd-purchase-button {
+a.btn, a.edd-submit {
 	text-decoration: none;
 }
 
@@ -826,7 +826,7 @@ a.btn, a#edd-purchase-button {
 /**
  * Active state
  */
-.btn:active, #edd-purchase-button:active {
+.btn:active, .edd-submit:active {
 	box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
 	outline: 0;
 }
@@ -834,9 +834,9 @@ a.btn, a#edd-purchase-button {
 /**
  * Disabled state
  */
-.btn[disabled], [disabled]#edd-purchase-button,
+.btn[disabled], [disabled].edd-submit,
 [data-submitting] .btn,
-[data-submitting] #edd-purchase-button {
+[data-submitting] .edd-submit {
 	box-shadow: none;
 	cursor: not-allowed;
 	opacity: 0.5;
@@ -866,7 +866,7 @@ a.btn, a#edd-purchase-button {
 /**
  * General styles
  */
-.btn, #edd-purchase-button,
+.btn, .edd-submit,
 button,
 html input[type=button],
 input[type=reset],
@@ -879,9 +879,9 @@ input[type=submit] {
 /**
  * Remove right margin on last element and inputs
  */
-.btn:last-child, #edd-purchase-button:last-child,
+.btn:last-child, .edd-submit:last-child,
 input.btn,
-input#edd-purchase-button {
+input.edd-submit {
 	margin-right: 0;
 }
 
@@ -962,7 +962,7 @@ select {
 
 form button,
 form .btn,
-form #edd-purchase-button {
+form .edd-submit {
 	margin-bottom: 1.1875em;
 }
 
@@ -1280,10 +1280,10 @@ label[for=edd-discount] {
 /**
  * "Complete Purchase" button
  */
-#edd-purchase-button {
+.edd-submit {
 	display: none;
 }
-.js-edd #edd-purchase-button {
+.js-edd .edd-submit {
 	display: inline-block;
 }
 
@@ -1479,7 +1479,7 @@ fieldset#edd_payment_mode_select legend {
 	}
 }
 
-.text-muted-light, .btn del, #edd-purchase-button del {
+.text-muted-light, .btn del, .edd-submit del {
 	color: #b2b2b2;
 }
 
