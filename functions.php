@@ -22,27 +22,6 @@
 
 
 	/**
-	 * Load inline header content
-	 */
-	function keel_load_inline_header() {
-		?>
-		<!-- Stylesheet -->
-		<style type="text/css">
-			<?php echo file_get_contents( get_template_directory_uri() . '/dist/css/fonts.css' ); ?>
-			<?php echo file_get_contents( get_template_directory_uri() . '/dist/css/main-checkout.min.css' ); ?>
-		</style>
-
-		<!-- Font Loading -->
-		<script>
-			<?php echo file_get_contents( get_template_directory_uri() . '/dist/js/fonts.min.js' ); ?>
-		</script>
-		<?php
-	}
-	// add_action('wp_head', 'keel_load_inline_header', 30);
-
-
-
-	/**
 	 * Load inline footer content
 	 */
 	function keel_load_inline_footer() {
