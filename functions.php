@@ -17,7 +17,27 @@
 		wp_enqueue_script( 'keel-theme-scripts', get_template_directory_uri() . '/dist/js/edd.min.js', null, null, true );
 		wp_enqueue_script( 'keel-theme-sw', get_template_directory_uri() . '/dist/js/swInit.min.js', null, null, true );
 	}
-	add_action('wp_enqueue_scripts', 'keel_load_theme_files');
+	// add_action('wp_enqueue_scripts', 'keel_load_theme_files');
+
+
+	/**
+	 * Load inline header content
+	 */
+	function keel_load_inline_header() {
+		?>
+			<!-- Stylesheets -->
+			<style type="text/css">
+				<?php echo file_get_contents( get_theme_file_path('/dist/css/fonts.css') ); ?>
+				<?php echo file_get_contents( get_theme_file_path('/dist/css/main-checkout.min.css') ); ?>
+			</style>
+
+			<!-- Font Loading -->
+			<script>
+				<?php echo file_get_contents( get_theme_file_path('/dist/js/fonts.min.js') ); ?>
+			</script>
+		<?php
+	}
+	add_action('wp_head', 'keel_load_inline_header', 30);
 
 
 
@@ -29,9 +49,11 @@
 		$get_checkout = function_exists( 'edd_get_option' ) ? edd_get_option( 'purchase_page', false ) : null;
 		?>
 			<script>
+				<?php echo file_get_contents( get_theme_file_path('/dist/js/edd.min.js') ); ?>
 				<?php if ( !empty( $get_checkout ) && is_page( $get_checkout ) && empty( edd_get_option('stripe_checkout') ) ) : ?>
 					jQuery.fn.validateCreditCard = function () {};
 				<?php endif; ?>
+				<?php echo file_get_contents( get_theme_file_path('/dist/js/swInit.min.js') ); ?>
 			</script>
 		<?php
 	}
