@@ -84,6 +84,9 @@
 		if ( is_feed() )
 			return $title;
 
+		if ( is_front_page() )
+			return 'Checkout | ' . get_bloginfo( 'name' );
+
 		// Add the site name
 		$title .= get_bloginfo( 'name' );
 
