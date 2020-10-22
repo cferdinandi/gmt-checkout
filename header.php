@@ -19,15 +19,8 @@
 
 		<!-- Icons: place in the root directory -->
 		<!-- https://github.com/audreyr/favicon-cheat-sheet -->
-		<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/favicon-144.png">
-		<meta name="msapplication-TileColor" content="#343d4d">
-		<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/favicon-ms.png">
-		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/favicon.ico">
-		<link rel="icon" sizes="16x16 32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/favicon.ico">
-
-		<!-- Feeds & Pings -->
-		<link rel="alternate" type="application/rss+xml" title="<?php printf( __( '%s RSS Feed', 'keel' ), get_bloginfo( 'name' ) ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>">
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="icon" sizes="16x16 32x32" href="/img/favicon.ico">
 
 		<?php wp_head(); ?>
 
