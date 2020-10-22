@@ -6,7 +6,7 @@
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> <?php echo keel_header_classes(); ?>>
+<html <?php language_attributes(); ?>>
 
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
@@ -32,12 +32,6 @@
 		<?php wp_head(); ?>
 
 	</head>
-
-	<?php
-		// Get page layout options
-		global $post;
-		$page_navs = get_post_meta( $post->ID, 'keel_page_navs', true );
-	?>
 
 	<body <?php body_class(); ?>>
 
