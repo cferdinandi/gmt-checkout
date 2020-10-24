@@ -997,7 +997,7 @@ textarea:focus {
  * Inline inputs
  */
 .input-inline, #card_exp_month,
-#card_exp_year, .edd-apply-discount {
+#card_exp_year, .edd-apply-discount, #edd-purchase-button, #edd-discount {
 	display: inline-block;
 	vertical-align: middle;
 	width: auto;
@@ -1264,6 +1264,15 @@ tfoot th {
 
 label[for=edd-discount] {
 	display: none;
+}
+
+.edd-discount-code-field-wrap {
+	display: block;
+	padding-top: 0.5em;
+}
+
+.edd-apply-discount {
+	margin-top: -0.125em;
 }
 
 /**
