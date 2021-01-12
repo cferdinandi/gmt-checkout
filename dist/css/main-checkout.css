@@ -1060,10 +1060,16 @@ textarea:focus {
 	}
 }
 
+.success-message,
+.error-message,
+.edd_errors,
+.edd-alert-error {
+	font-style: italic;
+}
+
 .error-message, .edd_errors,
 .edd-alert-error {
 	color: #e30810;
-	font-style: italic;
 	margin-bottom: 1em;
 }
 @media (prefers-color-scheme: dark) {
