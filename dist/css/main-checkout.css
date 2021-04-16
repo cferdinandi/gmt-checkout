@@ -846,15 +846,10 @@ a.btn, a.edd-submit {
 /**
  * Button size
  */
-.btn-large, #edd-purchase-button,
-.btn-xlarge {
+.btn-large, #edd-purchase-button {
 	font-size: 1em;
 	line-height: normal;
 	padding: 0.6875em 0.9375em;
-}
-
-.btn-xlarge {
-	padding: 1em 1.5em;
 }
 
 /**
