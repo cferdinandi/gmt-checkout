@@ -1556,7 +1556,7 @@ fieldset#edd_payment_mode_select legend {
 	margin-bottom: 1.5625em;
 }
 
-.margin-bottom-small, .error, .edd-payment-mode-label, #edd-payment-mode-wrap [type=radio], fieldset#edd_payment_mode_select, .ElementsApp .InputElement.is-invalid {
+.margin-bottom-small, .edd-payment-mode-label, #edd-payment-mode-wrap [type=radio], fieldset#edd_payment_mode_select {
 	margin-bottom: 0.5em;
 }
 
