@@ -55,7 +55,7 @@
 		</fieldset>
 		<?php
 	}
-	add_action( 'edd_purchase_form_after_user_info', 'keel_edd_user_info_fields' );
+	// add_action( 'edd_purchase_form_after_user_info', 'keel_edd_user_info_fields' );
 
 
 
@@ -65,7 +65,7 @@
 	function keel_edd_remove_credit_card_validator() {
 		wp_dequeue_script( 'creditCardValidator' );
 	}
-	add_action( 'wp_enqueue_scripts', 'keel_edd_remove_credit_card_validator' );
+	// add_action( 'wp_enqueue_scripts', 'keel_edd_remove_credit_card_validator' );
 
 
 
@@ -88,6 +88,30 @@
 			'</div>';
 	}
 	add_action( 'edd_purchase_form_after_submit', 'keel_edd_no_js_disable_purchase' );
+
+
+
+	function keel_is_recurring_in_cart () {
+		$cart = edd_get_cart_contents();
+		if ( is_array( $cart ) ) {
+			foreach ( $cart as $download ) {
+				if ( isset( $download['options'] ) && isset( $download['options']['recurring'] ) ) return true;
+			}
+		}
+		return false;
+	}
+
+
+
+	/**
+	 * Show payment details for payment installments
+	 */
+	function keel_edd_subscription_message () {
+		if (!keel_is_recurring_in_cart()) return;
+		$options = keel_get_theme_options();
+		echo stripslashes( $options['subscription'] );
+	}
+	add_action('edd_before_purchase_form', 'keel_edd_subscription_message');
 
 
 
@@ -125,12 +149,12 @@
 		</fieldset>
 	<?php
 	}
-	add_action( 'edd_purchase_form_after_cc_form', 'keel_edd_checkout_submit', 9999 );
+	// add_action( 'edd_purchase_form_after_cc_form', 'keel_edd_checkout_submit', 9999 );
 
 	function keel_edd_remove_checkout_submit() {
 		remove_action( 'edd_purchase_form_after_cc_form', 'edd_checkout_submit', 9999 );
 	}
-	add_action( 'init', 'keel_edd_remove_checkout_submit' );
+	// add_action( 'init', 'keel_edd_remove_checkout_submit' );
 
 
 	/**
@@ -151,7 +175,7 @@
 		);
 	    return $icons;
 	}
-	add_filter( 'edd_accepted_payment_icons', 'keel_edd_add_payment_icons' );
+	// add_filter( 'edd_accepted_payment_icons', 'keel_edd_add_payment_icons' );
 
 
 
@@ -162,7 +186,7 @@
 		remove_action( 'edd_payment_mode_top', 'edd_show_payment_icons' );
 		remove_action( 'edd_checkout_form_top', 'edd_show_payment_icons' );
 	}
-	add_action( 'init', 'keel_edd_remove_show_payment_icons' );
+	// add_action( 'init', 'keel_edd_remove_show_payment_icons' );
 
 
 
@@ -206,8 +230,8 @@
 
 		<?php
 	}
-	add_action( 'edd_payment_mode_top', 'keel_edd_show_payment_icons' );
-	add_action( 'edd_checkout_form_top', 'keel_edd_show_payment_icons' );
+	// add_action( 'edd_payment_mode_top', 'keel_edd_show_payment_icons' );
+	// add_action( 'edd_checkout_form_top', 'keel_edd_show_payment_icons' );
 
 
 
