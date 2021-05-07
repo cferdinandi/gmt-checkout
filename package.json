@@ -1,6 +1,6 @@
 {
 	"name": "gmt-checkout",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "The WordPress theme for GoMakeThings.com/checkout",
 	"author": {
 		"name": "Chris Ferdinandi",
@@ -17,7 +17,7 @@
 		"svg": "svgo -f src/svg static/svg --disable=removeViewBox,removeTitle",
 		"copy": "cp -r src/img static/img",
 		"theme": "node theme.js",
-		"build": "npm run clean && npm run js && npm run sw && npm run theme"
+		"build": "npm run clean && npm run js && npm run theme"
 	},
 	"devDependencies": {
 		"rollup": "^2.6.1",

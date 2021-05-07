@@ -55,7 +55,7 @@
 		</fieldset>
 		<?php
 	}
-	// add_action( 'edd_purchase_form_after_user_info', 'keel_edd_user_info_fields' );
+	add_action( 'edd_purchase_form_after_user_info', 'keel_edd_user_info_fields' );
 
 
 
@@ -65,7 +65,7 @@
 	function keel_edd_remove_credit_card_validator() {
 		wp_dequeue_script( 'creditCardValidator' );
 	}
-	// add_action( 'wp_enqueue_scripts', 'keel_edd_remove_credit_card_validator' );
+	add_action( 'wp_enqueue_scripts', 'keel_edd_remove_credit_card_validator' );
 
 
 
@@ -91,6 +91,10 @@
 
 
 
+	/**
+	 * Check if cart has a recurring payment
+	 * @return Boolean Returns true if recurring payment is in cart
+	 */
 	function keel_is_recurring_in_cart () {
 		$cart = edd_get_cart_contents();
 		if ( is_array( $cart ) ) {
@@ -149,12 +153,13 @@
 		</fieldset>
 	<?php
 	}
-	// add_action( 'edd_purchase_form_after_cc_form', 'keel_edd_checkout_submit', 9999 );
+	add_action( 'edd_purchase_form_after_cc_form', 'keel_edd_checkout_submit', 9999 );
+
 
 	function keel_edd_remove_checkout_submit() {
 		remove_action( 'edd_purchase_form_after_cc_form', 'edd_checkout_submit', 9999 );
 	}
-	// add_action( 'init', 'keel_edd_remove_checkout_submit' );
+	add_action( 'init', 'keel_edd_remove_checkout_submit' );
 
 
 	/**
