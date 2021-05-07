@@ -1359,6 +1359,10 @@ fieldset#edd_payment_mode_select legend {
 	display: none;
 }
 
+#edd-card-wrap {
+	margin-bottom: 1.1875em;
+}
+
 .edd_cart_item_image {
 	display: none;
 }
