@@ -14,6 +14,16 @@
 
 
 	/**
+	 * Disable EDD verification emails
+	 */
+	function keel_disable_verification_email() {
+		remove_action( 'edd_send_verification_email', 'edd_process_user_verification_request' );
+	}
+	add_action('init', 'keel_disable_verification_email');
+
+
+
+	/**
 	 * Unset first and last name as required fields in checkout
 	 * @param  Array $required_fields Required fields
 	 */
