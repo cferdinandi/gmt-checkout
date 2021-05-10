@@ -28,13 +28,6 @@
 
 	<body <?php body_class(); ?>>
 
-		<!-- Old Browser Warning -->
-		<!--[if lt IE 11]>
-			<aside class="container">
-				<p>Did you know that your web browser is a bit old? Some of the content on this site might not work right as a result. <a href="http://whatbrowser.org">Upgrade your browser</a> for a faster, safer, and better web experience.</p>
-			</aside>
-		<![endif]-->
-
 		<?php
 			// a11y enhancements
 			get_template_part( 'nav', 'accessibility' );
