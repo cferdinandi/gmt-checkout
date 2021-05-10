@@ -125,8 +125,8 @@
 		$options = keel_get_theme_options();
 		echo stripslashes( $options['subscription'] );
 	}
-	// add_action('edd_before_purchase_form', 'keel_edd_subscription_message');
-	add_action( 'edd_checkout_form_top', 'keel_edd_subscription_message' );
+	add_action('edd_before_purchase_form', 'keel_edd_subscription_message');
+	// add_action( 'edd_checkout_form_top', 'keel_edd_subscription_message' );
 
 
 

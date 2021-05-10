@@ -1,4 +1,4 @@
-/*! gmt-checkout v2.2.0 | (c) 2021 Chris Ferdinandi | MIT License | https://github.com/cferdinandi/gmt-checkout | Open Source: undefined */
+/*! gmt-checkout v2.3.0 | (c) 2021 Chris Ferdinandi | MIT License | https://github.com/cferdinandi/gmt-checkout | Open Source: undefined */
 (function () {
 	'use strict';
 
