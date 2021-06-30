@@ -13,7 +13,6 @@
 		$keel_theme = wp_get_theme();
 		wp_enqueue_style( 'keel-theme-fonts', get_template_directory_uri() . '/dist/css/fonts.css', null, null, 'all' );
 		wp_enqueue_style( 'keel-theme-styles', get_template_directory_uri() . '/dist/css/main-checkout.min.css', null, null, 'all' );
-		wp_enqueue_script( 'keel-theme-font-detects', get_template_directory_uri() . '/dist/js/fonts.min.js', null, null, null );
 		wp_enqueue_script( 'keel-theme-scripts', get_template_directory_uri() . '/dist/js/edd.min.js', null, null, true );
 		wp_enqueue_script( 'keel-theme-sw', get_template_directory_uri() . '/dist/js/swInit.min.js', null, null, true );
 	}
