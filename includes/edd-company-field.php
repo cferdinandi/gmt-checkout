@@ -11,7 +11,7 @@
 		</p>
 		<?php
 	}
-	add_action( 'edd_purchase_form_user_info_fields', 'keel_edd_display_company_name_field' );
+	add_action( 'edd_purchase_form_user_info', 'keel_edd_display_company_name_field' );
 
 
 
