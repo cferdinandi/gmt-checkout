@@ -14,6 +14,20 @@
 
 
 	/**
+	 * Add stripe language to credit card field
+	 */
+	function keel_add_via_stripe ( $gateways ) {
+		if (array_key_exists( 'stripe', $gateways )) {
+			if (array_key_exists( 'checkout_label', $gateways['stripe'] ))
+			$gateways['stripe']['checkout_label'] = 'Credit Card (via Stripe)';
+		}
+		return $gateways;
+	}
+	add_filter( 'edd_payment_gateways', 'keel_add_via_stripe' );
+
+
+
+	/**
 	 * Disable EDD verification emails
 	 */
 	function keel_disable_verification_email() {
