@@ -240,4 +240,4 @@
 	 */
 	require_once( dirname( __FILE__) . '/includes/theme-options.php' );     // Theme options
 	require_once( dirname( __FILE__) . '/includes/edd-overrides.php' );     // Override default Easy Digital Downloads behaviors
-	require_once( dirname( __FILE__) . '/includes/edd-company-field.php' ); // Add company name to checkout fields
+	// require_once( dirname( __FILE__) . '/includes/edd-company-field.php' ); // Add company name to checkout fields
