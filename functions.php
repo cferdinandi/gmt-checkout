@@ -239,6 +239,11 @@
 	 * Includes
 	 */
 	require_once( dirname( __FILE__) . '/includes/theme-options.php' );     // Theme options
+	require_once( dirname( __FILE__) . '/includes/edd-settings.php' );
+	require_once( dirname( __FILE__) . '/includes/edd-cart-form.php' );
+	require_once( dirname( __FILE__) . '/includes/redd-ecurring.php' );
+	require_once( dirname( __FILE__) . '/includes/edd-email-tags.php' );
+	require_once( dirname( __FILE__) . '/includes/edd-cart-product-links.php' );
 	// require_once( dirname( __FILE__) . '/includes/edd-overrides.php' );     // Override default Easy Digital Downloads behaviors
 	// require_once( dirname( __FILE__) . '/includes/edd-recurring.php' );     // Recurring payment hooks
 	// require_once( dirname( __FILE__) . '/includes/edd-company-field.php' ); // Add company name to checkout fields
