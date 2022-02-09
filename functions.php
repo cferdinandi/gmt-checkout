@@ -77,7 +77,7 @@
 
 
 	/**
-	 * Replace RSS links with Feedburner url
+	 * Replace RSS links with another url
 	 * @link http://codex.wordpress.org/Using_FeedBurner
 	 */
 	function keel_custom_rss_feed( $output, $feed ) {
@@ -239,6 +239,6 @@
 	 * Includes
 	 */
 	require_once( dirname( __FILE__) . '/includes/theme-options.php' );     // Theme options
-	require_once( dirname( __FILE__) . '/includes/edd-overrides.php' );     // Override default Easy Digital Downloads behaviors
-	require_once( dirname( __FILE__) . '/includes/edd-recurring.php' );     // Recurring payment hooks
+	// require_once( dirname( __FILE__) . '/includes/edd-overrides.php' );     // Override default Easy Digital Downloads behaviors
+	// require_once( dirname( __FILE__) . '/includes/edd-recurring.php' );     // Recurring payment hooks
 	// require_once( dirname( __FILE__) . '/includes/edd-company-field.php' ); // Add company name to checkout fields
