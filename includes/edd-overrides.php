@@ -132,35 +132,6 @@
 
 
 	/**
-	 * Check if cart has a recurring payment
-	 * @return Boolean Returns true if recurring payment is in cart
-	 */
-	function keel_is_recurring_in_cart () {
-		$cart = edd_get_cart_contents();
-		if ( is_array( $cart ) ) {
-			foreach ( $cart as $download ) {
-				if ( isset( $download['options'] ) && isset( $download['options']['recurring'] ) ) return true;
-			}
-		}
-		return false;
-	}
-
-
-
-	/**
-	 * Show payment details for payment installments
-	 */
-	function keel_edd_subscription_message () {
-		if (!keel_is_recurring_in_cart()) return;
-		$options = keel_get_theme_options();
-		echo stripslashes( $options['subscription'] );
-	}
-	add_action('edd_before_purchase_form', 'keel_edd_subscription_message');
-	// add_action( 'edd_checkout_form_top', 'keel_edd_subscription_message' );
-
-
-
-	/**
 	 * GDPR Message
 	 */
 	function keel_edd_gdpr_message() {
