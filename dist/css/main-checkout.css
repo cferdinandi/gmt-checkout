@@ -1298,27 +1298,6 @@ label[for=edd-discount] {
 /**
  * "Complete Purchase" button
  */
-.edd-submit {
-	display: none;
-}
-.js-edd .edd-submit {
-	display: inline-block;
-}
-
-.js-edd #keel-edd-no-js-purchase-message {
-	display: none;
-}
-
-/**
- * Cancel button
- */
-.edd-cancel {
-	display: none;
-}
-.js-edd-cancel .edd-cancel {
-	display: block;
-}
-
 /**
  * SSL message on credit card/Stripe checkout
  */
@@ -1600,7 +1579,7 @@ fieldset#edd_payment_mode_select legend {
 	padding-top: 0.25em;
 }
 
-.padding-top-small, .edd-cancel {
+.padding-top-small {
 	padding-top: 0.5em;
 }
 

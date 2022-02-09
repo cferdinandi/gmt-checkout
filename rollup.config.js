@@ -5,7 +5,7 @@ import pkg from './package.json';
 
 // Configs
 var configs = {
-	files: ['edd.js', 'swInit.js'],
+	files: ['swInit.js'],
 	formats: ['iife'],
 	default: 'iife',
 	pathIn: './src/js',

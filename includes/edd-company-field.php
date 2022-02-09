@@ -1,11 +1,6 @@
 <?php
 
 	/**
-	 * @section Add company field to checkout
-	 * @deprecated
-	 */
-
-	/**
 	 * Display company name field at checkout
 	 */
 	function keel_edd_display_company_name_field() {

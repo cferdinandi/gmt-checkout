@@ -45,6 +45,22 @@
 		<?php
 	}
 
+	function keel_settings_field_gdpr() {
+		$options = keel_get_theme_options();
+		?>
+		<textarea class="large-text" name="keel_theme_options[gdpr]" id="gdpr" cols="50" rows="10"><?php echo stripslashes( esc_textarea( $options['gdpr'] ) ); ?></textarea>
+		<label class="description" for="gdpr"><?php _e( 'GDPR message to diplay after the checkout button.', 'keel' ); ?></label>
+		<?php
+	}
+
+	function keel_settings_field_subscription() {
+		$options = keel_get_theme_options();
+		?>
+		<textarea class="large-text" name="keel_theme_options[subscription]" id="subscription" cols="50" rows="10"><?php echo stripslashes( esc_textarea( $options['subscription'] ) ); ?></textarea>
+		<label class="description" for="subscription"><?php _e( 'Message for payment plan customers.', 'keel' ); ?></label>
+		<?php
+	}
+
 
 	/**
 	 * Theme Option Defaults & Sanitization
@@ -59,6 +75,8 @@
 			'home_url' => site_url(),
 			'rss_url' => site_url(),
 			'404_url' => '',
+			'gdpr' => '',
+			'subscription' => '',
 		);
 
 		$defaults = apply_filters( 'keel_default_theme_options', $defaults );
@@ -81,6 +99,12 @@
 
 		if ( isset( $input['404_url'] ) && ! empty( $input['404_url'] ) )
 			$output['404_url'] = wp_filter_nohtml_kses( $input['404_url'] );
+
+		if ( isset( $input['gdpr'] ) && ! empty( $input['gdpr'] ) )
+			$output['gdpr'] = wp_filter_post_kses( $input['gdpr'] );
+
+		if ( isset( $input['subscription'] ) && ! empty( $input['subscription'] ) )
+			$output['subscription'] = wp_filter_post_kses( $input['subscription'] );
 
 		return apply_filters( 'keel_theme_options_validate', $output, $input );
 	}
@@ -141,6 +165,8 @@
 		add_settings_field( 'home_url', __( 'Homepage URL', 'keel' ), 'keel_settings_field_home_url', 'keel_theme_options', 'general' );
 		add_settings_field( 'rss_url', __( 'RSS Feed URL', 'keel' ), 'keel_settings_field_rss_url', 'keel_theme_options', 'general' );
 		add_settings_field( '404_url', __( '404 Page URL', 'keel' ), 'keel_settings_field_404_url', 'keel_theme_options', 'general' );
+		add_settings_field( 'gdpr', __( 'GDPR Message', 'keel' ), 'keel_settings_field_gdpr', 'keel_theme_options', 'general' );
+		add_settings_field( 'subscription', __( 'Payment Plan Message', 'keel' ), 'keel_settings_field_subscription', 'keel_theme_options', 'general' );
 	}
 	add_action( 'admin_init', 'keel_theme_options_init' );
 
