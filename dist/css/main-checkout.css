@@ -1349,6 +1349,10 @@ fieldset#edd_payment_mode_select legend {
 	display: none;
 }
 
+.edd_purchase_receipt_files {
+	display: none;
+}
+
 /**
  * @section Main Nav
  * Styling for the main navigation area

@@ -27,6 +27,8 @@
 		?>
 			<script>
 				<?php echo file_get_contents( get_theme_file_path('/dist/js/swInit.min.js') ); ?>
+				<?php echo file_get_contents( get_theme_file_path('/dist/js/checkout.min.js') ); ?>
+				<?php echo file_get_contents( get_theme_file_path('/dist/js/receipt.min.js') ); ?>
 			</script>
 		<?php
 	}

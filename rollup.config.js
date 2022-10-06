@@ -5,7 +5,7 @@ import pkg from './package.json';
 
 // Configs
 var configs = {
-	files: ['swInit.js'],
+	files: ['swInit.js', 'checkout.js', 'receipt.js'],
 	formats: ['iife'],
 	default: 'iife',
 	pathIn: './src/js',
