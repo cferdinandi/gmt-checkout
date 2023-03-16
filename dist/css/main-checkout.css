@@ -1,4 +1,4 @@
-/*! gmt-theme v2.8.0 | (c) 2022 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
+/*! gmt-theme v2.8.1 | (c) 2023 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gmt-theme */
 @charset "UTF-8";
 /**
  * @section CSS Reset
@@ -12,6 +12,7 @@
 a,
 button,
 input,
+.ElementsApp input,
 select,
 textarea,
 label,
@@ -933,6 +934,7 @@ label {
  */
 button,
 input,
+.ElementsApp input,
 optgroup,
 select,
 textarea {
@@ -947,6 +949,7 @@ textarea {
 @media (prefers-color-scheme: dark) {
 	button,
 input,
+.ElementsApp input,
 optgroup,
 select,
 textarea {
@@ -955,7 +958,7 @@ textarea {
 	}
 }
 
-input,
+input, .ElementsApp input,
 textarea,
 select {
 	border: 1px solid #b8b8b8;
@@ -965,14 +968,14 @@ select {
 	width: 100%;
 }
 @media (min-width: 38em) {
-	input,
+	input, .ElementsApp input,
 textarea,
 select {
 		line-height: 1.5625;
 	}
 }
 @media (prefers-color-scheme: dark) {
-	input,
+	input, .ElementsApp input,
 textarea,
 select {
 		border-color: #808080;
