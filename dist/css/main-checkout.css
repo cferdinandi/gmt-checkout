@@ -12,7 +12,6 @@
 a,
 button,
 input,
-.ElementsApp input,
 select,
 textarea,
 label,
@@ -934,7 +933,6 @@ label {
  */
 button,
 input,
-.ElementsApp input,
 optgroup,
 select,
 textarea {
@@ -949,7 +947,6 @@ textarea {
 @media (prefers-color-scheme: dark) {
 	button,
 input,
-.ElementsApp input,
 optgroup,
 select,
 textarea {
@@ -958,7 +955,7 @@ textarea {
 	}
 }
 
-input, .ElementsApp input,
+input,
 textarea,
 select {
 	border: 1px solid #b8b8b8;
@@ -968,14 +965,14 @@ select {
 	width: 100%;
 }
 @media (min-width: 38em) {
-	input, .ElementsApp input,
+	input,
 textarea,
 select {
 		line-height: 1.5625;
 	}
 }
 @media (prefers-color-scheme: dark) {
-	input, .ElementsApp input,
+	input,
 textarea,
 select {
 		border-color: #808080;
@@ -1344,7 +1341,8 @@ fieldset#edd_payment_mode_select legend {
 	display: none;
 }
 
-#edd-card-wrap {
+#edd-card-wrap,
+#edd-card-details-wrap {
 	margin-bottom: 1.1875em;
 }
 
