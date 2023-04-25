@@ -1162,9 +1162,6 @@ figcaption {
 	svg path[fill="#2cad4e"] {
 		fill: #a6e8b9;
 	}
-	svg path[stroke="#23D8A0"] {
-		stroke: #ffffff;
-	}
 	svg path[fill="#800080"] {
 		fill: #ff4dff;
 	}
@@ -1174,6 +1171,10 @@ figcaption {
 
 	.company-logo path {
 		fill: #ffffff;
+	}
+
+	.company-logo path[stroke] {
+		stroke: #fff;
 	}
 }
 /**
