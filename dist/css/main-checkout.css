@@ -1531,6 +1531,18 @@ fieldset#edd_payment_mode_select legend {
 	}
 }
 /**
+ * Background Color
+ */
+.bg-muted {
+	background-color: #f7f7f7;
+}
+@media (prefers-color-scheme: dark) {
+	.bg-muted {
+		background-color: #171b22;
+	}
+}
+
+/**
  * Margins
  */
 .no-margin-top {
