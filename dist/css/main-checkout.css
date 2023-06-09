@@ -217,12 +217,18 @@ a {
 a:active, a:focus, a:hover {
 	color: #00476c;
 }
+main a:not(.btn):not(.edd-submit):visited {
+	color: #800080;
+}
 @media (prefers-color-scheme: dark) {
 	a {
 		color: #73cffa;
 	}
 	a:active, a:focus, a:hover {
 		color: #29b6f7;
+	}
+	main a:not(.btn):not(.edd-submit):visited {
+		color: #debfde;
 	}
 }
 
@@ -236,12 +242,12 @@ a:active, a:focus, a:hover {
 /**
  * Remove default link styling
  */
-.link-plain {
+.link-plain, .link-plain:visited {
 	color: #272727;
 	text-decoration: none;
 }
 @media (prefers-color-scheme: dark) {
-	.link-plain {
+	.link-plain, .link-plain:visited {
 		color: #ffffff;
 	}
 }
@@ -1413,28 +1419,28 @@ fieldset#edd_payment_mode_select legend {
 .nav {
 	margin-bottom: 0;
 }
-.nav a {
+.nav a:not(.btn):not(.edd-submit) {
 	color: #757575;
 	text-decoration: none;
 }
 @media (prefers-color-scheme: dark) {
-	.nav a {
+	.nav a:not(.btn):not(.edd-submit) {
 		color: #e5e5e5;
 	}
 }
-.nav a:hover,
-.nav a:active,
-.nav a:focus,
-.nav .active a,
+.nav a:not(.btn):not(.edd-submit):hover,
+.nav a:not(.btn):not(.edd-submit):active,
+.nav a:not(.btn):not(.edd-submit):focus,
+.nav .active a:not(.btn):not(.edd-submit),
 .nav [aria-current=page] {
 	border-bottom: 0.125em solid #fa7176;
 	color: #272727;
 }
 @media (prefers-color-scheme: dark) {
-	.nav a:hover,
-.nav a:active,
-.nav a:focus,
-.nav .active a,
+	.nav a:not(.btn):not(.edd-submit):hover,
+.nav a:not(.btn):not(.edd-submit):active,
+.nav a:not(.btn):not(.edd-submit):focus,
+.nav .active a:not(.btn):not(.edd-submit),
 .nav [aria-current=page] {
 		color: #ffffff;
 	}
