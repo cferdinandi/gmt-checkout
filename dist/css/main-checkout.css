@@ -242,6 +242,10 @@ p {
 	margin: 0 0 1.5625em;
 }
 
+p:empty {
+	margin-bottom: 0;
+}
+
 /**
  * Hyperlink styling
  */
@@ -1587,6 +1591,11 @@ fieldset#edd_payment_mode_select legend {
 	text-align: center;
 }
 
+@media (max-width: 38em) {
+	.text-center-small {
+		text-align: center;
+	}
+}
 .text-right {
 	text-align: right;
 }

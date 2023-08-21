@@ -27,7 +27,6 @@
 		?>
 			<script>
 				<?php echo file_get_contents( get_theme_file_path('/dist/js/swInit.min.js') ); ?>
-				<?php echo file_get_contents( get_theme_file_path('/dist/js/checkout.min.js') ); ?>
 				<?php echo file_get_contents( get_theme_file_path('/dist/js/receipt.min.js') ); ?>
 			</script>
 		<?php
@@ -170,6 +169,9 @@
 
 	// Remove Jetpack Styles
 	add_filter( 'jetpack_implode_frontend_css', '__return_false' );
+
+	// Add post thumbnail support
+	add_theme_support( 'post-thumbnails', array( 'download' ) );
 
 
 
