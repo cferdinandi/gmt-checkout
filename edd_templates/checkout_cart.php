@@ -13,7 +13,7 @@ global $post; ?>
 			<div class="edd_cart_item margin-bottom clearfix" id="edd_cart_item_<?php echo esc_attr( $key ) . '_' . esc_attr( $item['id'] ); ?>" data-download-id="<?php echo esc_attr( $item['id'] ); ?>">
 				<?php do_action( 'edd_checkout_table_body_first', $item ); ?>
 				<?php if ( current_theme_supports( 'post-thumbnails' ) && has_post_thumbnail( $item['id'] ) ) : ?>
-				<img class="img-left" height="150" width="150" src="<?php echo get_the_post_thumbnail_url($item['id'], 'full'); ?>">
+				<img alt="" class="img-left" height="150" width="150" src="<?php echo get_the_post_thumbnail_url($item['id'], 'full'); ?>">
 				<?php endif; ?>
 				<p class="no-margin-bottom">
 					<span class="edd_cart_item_name">
