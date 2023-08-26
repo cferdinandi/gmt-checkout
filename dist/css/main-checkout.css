@@ -1478,6 +1478,7 @@ fieldset#edd_payment_mode_select legend {
  * The navigation menu
  */
 .nav {
+	justify-content: center;
 	margin-bottom: 0;
 }
 .nav a:not(.btn):not(.edd-submit) {
