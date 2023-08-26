@@ -407,6 +407,10 @@ dt {
 	column-gap: 0.5em;
 }
 
+.list-inline-center {
+	justify-content: center;
+}
+
 /**
  * Heading styling for h1 through h6 elements.
  * Heading class lets you use one heading type for semantics, but style it as another heading type.
@@ -1614,13 +1618,6 @@ fieldset#edd_payment_mode_select legend {
 		text-align: right;
 	}
 }
-/**
- * Flex alignment
- */
-.flex-center {
-	justify-content: center;
-}
-
 /**
  * Background Color & Borders
  */
