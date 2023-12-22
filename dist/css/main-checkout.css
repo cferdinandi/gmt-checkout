@@ -456,6 +456,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.4;
 	margin: 0 0 1em;
 	padding: 0;
+	text-wrap: pretty;
 	word-wrap: break-word;
 }
 
@@ -1376,6 +1377,11 @@ td {
 .table-striped tbody tr:nth-child(odd) {
 	background-color: #f7f7f7;
 }
+@media (prefers-color-scheme: dark) {
+	.table-striped tbody tr:nth-child(odd) {
+		background-color: #171b22;
+	}
+}
 
 /**
  * @section Easy Digital Downloads
@@ -1604,6 +1610,10 @@ fieldset#edd_payment_mode_select legend {
  */
 .text-small, .gmt-edd-link-to-product-in-cart {
 	font-size: 0.9375em;
+}
+
+.text-xsmall {
+	font-size: 0.75em;
 }
 
 .text-large, .text-xlarge {
